@@ -1,0 +1,9 @@
+<ng-container *ngIf="alertas$ | async as alerts">
+
+    <div @fade class="alert" [class.alertaExito]="alerta.tipo==='success'" [class.alertaError]="alerta.tipo==='error'" *ngFor="let alerta of alerts">
+        <span class="closebtn" (click)="cerrarAlerta(alerta.id)">&times;</span>
+       <div></div>
+        <img *ngIf="alerta.tipo==='success'" class="iconAlert" src="assets/icons/check.png">
+        <img *ngIf="alerta.tipo==='error'" class="iconAlert" src="assets/icons/close.png">  <span class="alertText">{{alerta.message}}</span>
+    </div>
+</ng-container>
