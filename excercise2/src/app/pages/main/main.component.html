@@ -1,0 +1,44 @@
+<div class="content">
+
+    <div class="card">
+        <h3>Formulario</h3>
+
+        <form (ngSubmit)="guardar()" novalidate [formGroup]="formulario">
+            <div>
+                <label>
+                    Nombre
+                </label>
+                <input type="text" placeholder="Ingrese nombre" maxlength="20" minlength="5" formControlName="nombre_producto">
+                <div *ngIf="formulario.controls['nombre_producto']?.invalid && (formulario.controls['nombre_producto'].dirty || formulario.controls['nombre_producto'].touched) || (formulario.controls['nombre_producto']?.invalid && formulario.touched)">
+                    <a *ngIf="formulario.controls['nombre_producto'].errors?.['required']" class="text-danger">
+                        Complete este campo.
+                    </a>
+                    <a *ngIf="!formulario.controls['nombre_producto'].errors?.['required']" class="text-danger">
+                        El nombre de producto debe poseer minimo 5 y maximo 20 caracteres
+                    </a>
+                </div>
+            </div>
+            <div>
+                <label>
+                    Valor
+                </label>
+                <input type="number" placeholder="Ingrese valor" max="20" min="5" formControlName="valor_producto">
+                <div *ngIf="formulario.controls['valor_producto']?.invalid &&( formulario.controls['valor_producto'].dirty || formulario.controls['valor_producto'].touched)     || (formulario.controls['valor_producto']?.invalid && formulario.touched)">
+                    <a *ngIf="formulario.controls['valor_producto'].errors?.['required']" class="text-danger">
+                        Complete este campo.
+                    </a>
+                    <a *ngIf="!formulario.controls['valor_producto'].errors?.['required']" class="text-danger">
+                        El valor de producto debe ser minimo 5 y maximo 20
+
+                    </a>
+                </div>
+            </div>
+            <div class="form-row">
+                <button type="button" (click)="limpiarFormulario()" class="btn-secundario">Limpiar</button>
+                <button type="submit" class="btn">Validar</button>
+            </div>
+            
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+
+input {
+  font-family: "Open Sans";
+  
+}
+label{
+  font-weight: bold;
+}
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input:invalid {
+  background-color: pink;
+}
+
+form {
+  width: 100%;
+}
+
+.text-danger {
+  color: red;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.form-row{
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  
+}

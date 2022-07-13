@@ -1,0 +1,46 @@
+
+
+  .alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    font-weight: bold;
+  }
+  .alertaExito{
+    background-color: #409738;
+    box-shadow: rgba(49, 85, 42, 0.35) 0px 5px 15px;
+  }
+  .iconAlert{
+    width: 40px;
+  }
+  .alertaError{
+    background-color: #f44336;
+    box-shadow: rgba(226, 128, 115, 0.35) 0px 5px 15px;
+  }
+
+  .alertText{
+    margin: 0 !important;
+    position: absolute  !important;
+    top: 40%  !important;
+    left: 50%  !important;
+    transform: translate(-50%, -50%)  !important;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
